@@ -1,3 +1,3 @@
 # clone-tabnews
 
-Implementação do https://www.tabnews.com.br para o https://curso.dev com filipedeschamps
+Implementação do https://www.tabnews.com.br para o https://curso.dev com `@filipedeschamps`
