@@ -7,9 +7,7 @@ async function query(queryObject) {
     user: process.env.POSTGRES_USER,
     database: process.env.POSTGRES_DB,
     password: process.env.POSTGRES_PASSWORD,
-    ssl: {
-      rejectUnauthorized: false, // Aceitar certificado autoassinado (se necessário)
-    },
+    ssl: process.env.NODE_ENV === "development" ? false : true,
   });
 
   console.log("Credenciais do Postgres:", {
@@ -18,9 +16,7 @@ async function query(queryObject) {
     user: process.env.POSTGRES_USER,
     database: process.env.POSTGRES_DB,
     password: process.env.POSTGRES_PASSWORD,
-    ssl: {
-      rejectUnauthorized: false, // Aceitar certificado autoassinado (se necessário)
-    },
+    ssl: process.env.NODE_ENV === "development" ? false : true,
   });
 
   try {
