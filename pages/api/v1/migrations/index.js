@@ -23,7 +23,7 @@ export default async function migrations(request, response) {
 
     await dbClient.end();
 
-    response.status(200).json(pendingMigrations);
+    return response.status(200).json(pendingMigrations);
   }
 
   const migratedMigrantions = await migrationRunner({
@@ -37,5 +37,5 @@ export default async function migrations(request, response) {
     response.status(201).json(migratedMigrantions);
   }
 
-  response.status(200).json(migratedMigrantions);
+  return response.status(200).json(migratedMigrantions);
 }
